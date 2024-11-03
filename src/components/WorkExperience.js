@@ -48,7 +48,9 @@ const WorkExperience = () => {
   ];
 
   return (
+    
     <section id="work-experience" className="work-experience">
+    
       <h2 className="section-title">Work Experience</h2>
       <div className="timeline">
       <div className="line"></div>
@@ -76,7 +78,7 @@ const WorkExperience = () => {
 
 
       </div>
-      <img className="background-image-right" src={colorSharp} alt="Image" />
+
     </section>
   );
 };

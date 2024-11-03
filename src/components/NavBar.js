@@ -56,9 +56,7 @@ export const NavBar = () => {
                 
               </div>
               
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Special achivements</span></button>
-              </HashLink>
+
             </span>
           </Navbar.Collapse>
         </Container>
