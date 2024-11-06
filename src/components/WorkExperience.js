@@ -1,9 +1,6 @@
 import React from 'react';
 
 
-import colorSharp from "../assets/img/color-sharp2.png"
-
-
 const WorkExperience = () => {
 
   const App = () => {

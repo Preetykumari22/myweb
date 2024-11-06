@@ -1,11 +1,11 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/digital-cloud-data-storage-digital-concept-cloudscape-digital-online-service-global-network-database-backup-computer-infrastructure-technol.jpg";
-import projImg2 from "../assets/img/stock-photo-data-science-and-big-data-technology-scientist-computing-analysing-and-visualizing-complex-data-2284126663.jpg";
-import projImg3 from "../assets/img/isometric-devops-illustration_52683-84175.avif";
-import projImg4 from "../assets/img/64e4b431e8e8131449f70444_Image-from-www.toools.design-on-2023-08-22-at-3.12.09-PM.jpeg";
+import projImg1 from "../assets/img/pycloud.jpg";
+import projImg2 from "../assets/img/ml.jpg";
+import projImg3 from "../assets/img/devops.avif";
+import projImg4 from "../assets/img/ai.jpeg";
 import projImg5 from "../assets/img/k.avif";
-import projImg6 from "../assets/img/Screenshot 2024-10-27 205343.png";
+import projImg6 from "../assets/img/Screenshot.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
