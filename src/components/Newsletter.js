@@ -1,26 +1,13 @@
-import { useState, useEffect } from "react";
-import { Col, Row, Alert } from "react-bootstrap";
+import { useEffect } from "react";
+import { Col, Row } from "react-bootstrap";
 import photo from "../assets/img/tu.jpg";
 
-export const Newsletter = ({ status, message, onValidated }) => {
-  const [email, setEmail] = useState('');
-
+export const Newsletter = ({ status }) => {
   useEffect(() => {
-    if (status === 'success') clearFields();
+    if (status === 'success') {
+      // Clear fields if needed
+    }
   }, [status]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    email &&
-      email.indexOf("@") > -1 &&
-      onValidated({
-        EMAIL: email
-      });
-  };
-
-  const clearFields = () => {
-    setEmail('');
-  };
 
   return (
     <Col >

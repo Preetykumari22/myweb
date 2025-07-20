@@ -8,9 +8,6 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import Chatbot from "./components/Chatbot";
 import WorkExperience from './components/WorkExperience';
-
-
-
 function App() {
   return (
     <div className="App">
@@ -21,7 +18,6 @@ function App() {
       <WorkExperience />
       <Projects />
       <Contact />
-
       <Footer />
     </div>
   );

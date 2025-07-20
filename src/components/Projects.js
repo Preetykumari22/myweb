@@ -1,105 +1,141 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/pycloud.jpg";
-import projImg2 from "../assets/img/ml.jpg";
-import projImg3 from "../assets/img/devops.avif";
-import projImg4 from "../assets/img/ai.jpeg";
-import projImg5 from "../assets/img/k.avif";
-import projImg6 from "../assets/img/Screenshot.png";
-
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import ansibleImg from '../assets/img/project-img1.png';
+import jenkinsImg from '../assets/img/project-img2.png';
+import devopsImg from '../assets/img/project-img3.png';
+import awsImg from '../assets/img/pycloud.jpg';
 
 export const Projects = () => {
   const projects = [
     {
-      title: "PyCloudOps",
-      description: "AWS Task Automation SuiteScript",
-      imgUrl: projImg1,
-      githubLink: "https://github.com/Preetykumari22/aws_projects"
+      title: "Optimizing Microservices Deployment",
+      description: (
+        <>
+          <strong>Tech Stack:</strong> AWS EKS, Kubernetes, ArgoCD, Istio, Prometheus, Grafana<br/>
+          <strong>Date:</strong> Jan 2025<br/>
+          <strong>GitHub:</strong> <a href="https://github.com/Preetykumari22/Project_DevOps" target="_blank" rel="noopener noreferrer">Project_DevOps</a><br/>
+          <ul className="project-bullets">
+            <li>Deployed a Kubernetes cluster on AWS EKS to orchestrate scalable microservices.</li>
+            <li>Automated deployments with ArgoCD, enabling GitOps workflows from GitHub.</li>
+            <li>Used Istio, Prometheus, Grafana, and Kiali for secure traffic management, monitoring, and visualization.</li>
+            <li>Implemented service mesh for secure inter-service communication and traffic management.</li>
+            <li>Set up comprehensive monitoring and alerting with Prometheus and Grafana dashboards.</li>
+          </ul>
+        </>
+      ),
+      imgUrl: devopsImg,
+      githubLink: "https://github.com/Preetykumari22/Project_DevOps"
     },
     {
-      title: "PetPredictor",
-      description: "Image classification CNN",
-      imgUrl: projImg2,
-      githubLink: "https://github.com/Preetykumari22/CatVsDogML"
+      title: "Py-CloudOps: AWS Task Automation Suite",
+      description: (
+        <>
+          <strong>Tech Stack:</strong> Python, AWS Services (EC2, S3, Lambda, CloudFormation)<br/>
+          <strong>Date:</strong> Jun 2024<br/>
+          <strong>GitHub:</strong> <a href="https://github.com/Preetykumari22/pycloud" target="_blank" rel="noopener noreferrer">pycloud</a><br/>
+          <ul className="project-bullets">
+            <li>Developed Py-CloudOps, a Python tool for automating AWS tasks like EC2 launches and S3 uploads.</li>
+            <li>Added features for text-to-speech, WhatsApp messaging, and Instagram posting.</li>
+            <li>Focused on modular, reusable code for reliable local and cloud operations.</li>
+            <li>Implemented AWS Lambda functions for serverless automation workflows.</li>
+            <li>Created CloudFormation templates for infrastructure as code deployment.</li>
+          </ul>
+        </>
+      ),
+      imgUrl: awsImg,
+      githubLink: "https://github.com/Preetykumari22/pycloud"
     },
     {
-      title: "My DevOps Project",
-      description: "EC2 instance deployed",
-      imgUrl: projImg3,
-      githubLink: "https://github.com/Preetykumari22/website"
+      title: "Ansible Cluster with Docker and Kubernetes",
+      description: (
+        <>
+          <strong>Tech Stack:</strong> Ansible, Docker, Kubernetes, YAML<br/>
+          <strong>Date:</strong> May 2024<br/>
+          <strong>GitHub:</strong> <a href="https://github.com/Preetykumari22/ansible_cluster" target="_blank" rel="noopener noreferrer">ansible_cluster</a><br/>
+          <ul className="project-bullets">
+            <li>Set up an Ansible cluster manually using Docker containers and Kubernetes pods, without pre-built images.</li>
+            <li><strong>Project Structure:</strong> Dockerfile.master (Ansible Master), Dockerfile.node (Ansible Node), ansible-master.yaml, ansible-node.yaml.</li>
+            <li>Automated infrastructure provisioning and configuration management for scalable deployments.</li>
+            <li>Created custom Docker images for Ansible master and node components.</li>
+            <li>Implemented Kubernetes manifests for orchestration and scaling.</li>
+          </ul>
+        </>
+      ),
+      imgUrl: ansibleImg,
+      githubLink: "https://github.com/Preetykumari22/ansible_cluster"
     },
     {
-      title: "Domain Expert Model (GEN-AI)",
-      description: "Fine-tuned text generation",
-      imgUrl: projImg4,
-      githubLink: "https://github.com/Preetykumari22/GEN-AI-AWS-"
-    },
-    {
-      title: "Sticky Notes",
-      description: "Interactive sticky notes",
-      imgUrl: projImg5,
-      githubLink: "https://github.com/Preetykumari22/sticky_n"
-    },
-    {
-      title: "Netflix Clone",
-      description: "HTML/CSS Netflix clone",
-      imgUrl: projImg6,
-      githubLink: "https://github.com/Preetykumari22/Netflix_clone"
+      title: "Jenkins CI/CD Setup with Docker & Kubernetes",
+      description: (
+        <>
+          <strong>Tech Stack:</strong> Jenkins, Docker, Kubernetes (AWS EKS), Shell Scripting, GitHub<br/>
+          <strong>Date:</strong> Apr 2024<br/>
+          <strong>GitHub:</strong> <a href="https://github.com/Preetykumari22/Jenkins-CI-CD-Setup-with-Docker-Kubernetes" target="_blank" rel="noopener noreferrer">Jenkins-CI-CD-Setup-with-Docker-Kubernetes</a><br/>
+          <ul className="project-bullets">
+            <li>Complete hands-on CI/CD pipeline setup using Jenkins, Docker, and Kubernetes (EKS) without pre-built Jenkins Docker images.</li>
+            <li>Jenkins master runs inside a manually created Docker container; Kubernetes is used for dynamic Jenkins agent provisioning.</li>
+            <li>Technologies: Docker, Jenkins, Kubernetes (AWS EKS), EC2 (Ubuntu), Shell CLI, GitHub.</li>
+            <li>Built custom Jenkins Docker image with all necessary plugins and configurations.</li>
+            <li>Implemented dynamic agent provisioning using Kubernetes pods for scalable CI/CD workflows.</li>
+          </ul>
+        </>
+      ),
+      imgUrl: jenkinsImg,
+      githubLink: "https://github.com/Preetykumari22/Jenkins-CI-CD-Setup-with-Docker-Kubernetes"
     },
   ];
 
   const extracurriculars = [
     {
-      title: "Participated in the AWS DeepRacer contest.",
+      title: "🏆 AWS DeepRacer Contest Participant — Explored reinforcement learning and autonomous driving technologies, gaining hands-on experience with ML algorithms and cloud-based robotics.",
     },
     {
-      title: "Completed Machine Learning by Udemy.",
+      title: "☁️ Google Cloud Study Jam — Completed comprehensive hands-on labs and earned professional certification, demonstrating expertise in cloud computing fundamentals.",
     },
     {
-      title: "Passed the internal level of Smart India Hackathon 2024, progressing to the next phase.",
+      title: "🐍 Python Programming Certificate — FreeCodeCamp completion with outstanding performance recognition, showcasing strong programming fundamentals.",
     },
     {
-      title: "Certified and received swags in GOOGLE CLOUD STUDY JAM.",
+      title: "🔧 ARCADE Cloud Labs — 10+ months of intensive hands-on cloud projects with performance recognition, building real-world infrastructure solutions.",
     },
     {
-      title: "Doing ARCADE labs+projects for at least 10 months also received SWAGS.",
+      title: "💼 Microsoft Learn Student Ambassadors — Earned multiple badges and LinkedIn Premium access, demonstrating commitment to continuous learning.",
     },
     {
-      title: "Completed the course on introduction to Machine learning and reinforcement learning by AWS.",
+      title: "🤖 AWS Machine Learning Course — Completed comprehensive introduction to ML and reinforcement learning, expanding AI/ML skill set.",
     },
     {
-      title: "Certified in python learning by freecodecamp.",
+      title: "🚀 Smart India Hackathon 2024 — Advanced to next phase with innovative solutions, showcasing problem-solving and technical creativity.",
     },
     {
-      title: "received badges + linkedin premium in Microsoft Learn Student Ambassadors event.",
+      title: "🎨 500+ Creative Designs — Proficient in Canva and Adobe Illustrator, creating professional graphics and visual content.",
     },
     {
-      title: "500+ designs in canva + basics of illustrator.",
+      title: "🎯 Technical Event Organization — Led multiple IEEE and university technical events, demonstrating leadership and organizational skills.",
     },
   ];
 
   const positions = [
     {
-      title: "IEEE MP SECTION | VOLUNTEER",
+      title: "🎯 IEEE GGV Student Branch | CHAIRPERSON — Leading 200+ student members, organizing technical workshops, hackathons, and industry collaborations to foster innovation and skill development.",
     },
     {
-      title: "IEEE GGV | SECRETARY",
-    },
-
-    {
-      title: "SILICON GGV | GRAPHIC DESIGNER",
+      title: "📰 ECE Department Newsletter | TEAM LEAD — Managing content creation, design, and distribution of department newsletter, ensuring effective communication across 500+ students and faculty.",
     },
     {
-      title: "ECE NEWSLETTER (THE FLIP FLOP) | LEAD",
+      title: "🤝 IEEE MP Section | VOLUNTEER — Contributing to regional IEEE initiatives, supporting technical conferences, and promoting engineering excellence across Madhya Pradesh.",
     },
     {
-      title: "EQUILIBRIO TECHFEST GGV | GRAPHIC DESIGNER",
+      title: "👩‍💻 WIE IEEE | ACTIVE MEMBER — Advocating for women in engineering, participating in mentorship programs, and organizing events to encourage female participation in STEM.",
     },
     {
-      title: "JOURNAL OF AI & CS (JAICS) | Author & Publisher",
+      title: "🎨 Silicon Club GGV | GRAPHIC DESIGNER — Creating compelling visual content for technical events, social media campaigns, and promotional materials using modern design tools.",
+    },
+    {
+      title: "🚀 Equilibrio Techfest GGV | GRAPHIC DESIGNER — Designing innovative graphics for the university's premier technical festival, reaching 1000+ participants annually.",
     },
   ];
 
@@ -112,7 +148,7 @@ export const Projects = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Accomplishments</h2>
-                  <p>Led projects in AWS Cloud and app development; awarded in Walmart Sparkathon, SIH, and Google Cloud. As ECE Flip Flop lead and Foruppo Fellow, I strengthened leadership, communication, and organizational skills.</p>
+                  <p>🚀 <strong>Cloud & DevOps Specialist</strong> with proven expertise in AWS, Kubernetes, and CI/CD automation. Led <strong>AWS DeepRacer</strong> participation, achieved <strong>Google Cloud certification</strong>, and orchestrated multiple technical leadership initiatives. Currently serving as <strong>Chairperson of IEEE GGV Student Branch</strong>, driving innovation in cloud infrastructure, Terraform automation, and DevSecOps practices. Passionate about building scalable, secure, and efficient cloud-native solutions.</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
@@ -128,16 +164,9 @@ export const Projects = () => {
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {
-                            projects.map((project, index) => {
-                              return (
-                                <ProjectCard
-                                  key={index}
-                                  {...project}
-                                />
-                              )
-                            })
-                          }
+                          {projects.map((project, index) => (
+                            <ProjectCard key={index} {...project} />
+                          ))}
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
@@ -155,7 +184,7 @@ export const Projects = () => {
                         <Row>
                           {positions.map((position, index) => (
                             <Col key={index} sm={12} md={4}>
-                              <div className={`position-card ${index % 2 === 0 ? 'bg-light' : 'bg-dark text-white'}`}>
+                              <div className="position-card">
                                 <h5>{position.title}</h5>
                               </div>
                             </Col>
@@ -169,7 +198,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background" />
     </section>
   );
 };

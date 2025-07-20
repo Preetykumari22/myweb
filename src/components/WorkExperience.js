@@ -1,81 +1,83 @@
 import React from 'react';
+import ansibleLogo from '../assets/img/ansible.svg';
+import terraformLogo from '../assets/img/terraform.svg';
+import githubLogo from '../assets/img/github.svg';
+import jenkinsLogo from '../assets/img/jenkins.svg';
 
+const devopsIcons = {
+  jenkins: <img src={jenkinsLogo} alt="Jenkins" className="workexp-logo jenkins-logo-large" title="Jenkins: Orchestrates CI/CD automation" />,
+  ansible: <img src={ansibleLogo} alt="Ansible" className="workexp-logo" title="Ansible: Automates infrastructure and configuration" />,
+  terraform: <img src={terraformLogo} alt="Terraform" className="workexp-logo" title="Terraform: Infrastructure as Code (IaC) tool" />,
+  github: <img src={githubLogo} alt="GitHub" className="workexp-logo" title="GitHub: Source code and version control" />,
+};
+
+const experiences = [
+  {
+    title: "AWS Cloud and DevOps Intern",
+    company: "LINUX WORLD PVT LMT",
+    duration: "Jan 2025 – Jun 2025",
+    description: [
+      "Designed and automated scalable AWS infrastructure (EC2, S3, RDS, IAM, Lambda) with Terraform, CloudFormation, and Python; monitored performance using Prometheus, Grafana, and CloudWatch.",
+      "Built CI/CD pipelines with Jenkins, GitHub Actions, and ArgoCD; containerized apps with Docker and Kubernetes; enforced DevSecOps practices for secure, reliable deployments."
+    ],
+    icon: devopsIcons.ansible,
+  },
+  {
+    title: "Cloud Computing Intern",
+    company: "PRESEAR SOFTWARE PVT LMT",
+    duration: "Aug 2022 – Jan 2024",
+    description: [
+      "Developed and deployed web apps on AWS EC2 and Amplify, ensuring high availability.",
+      "Configured Load Balancers and RDS for secure, scalable cloud solutions."
+    ],
+    icon: devopsIcons.terraform,
+  },
+  {
+    title: "AWS Cloud Computing Intern",
+    company: "Linux World Pvt. Ltd",
+    duration: "June 2024 – Aug 2024",
+    description: [
+      "By using various AWS services, integrated all and worked on various use cases.",
+      "Built deployment pipelines with Jenkins and GitHub.",
+      "Visualized cloud metrics with Grafana dashboards."
+    ],
+    icon: devopsIcons.github,
+  },
+];
 
 const WorkExperience = () => {
-
-  const App = () => {
-    return (
-      <div style={{ display: 'flex', height: '100vh' }}>
-        <div style={{ flex: 1, backgroundColor: '#f9f9f9' }}>
-          {/* Left side content */}
-        </div>
-        <div style={{ flex: 1, backgroundColor: '#f9f9f9' }}>
-          {/* Right side content */}
-        </div>
-      </div>
-    );
-  };
-  const experiences = [
-    {
-      title: "AWS Cloud Computing Intern | ",
-      company: "Linux World PVT LMT",
-      duration: "Jul'24 - Aug'24",
-      description: [
-        "I enhanced my skills in Python, Linux, RHEL 9, AWS services, and various DevOps tools during my internship. This experience deepened my understanding of software development and cloud technologies, preparing me for future challenges in the tech industry."
-      ],
-    },
-
-    {
-      title: "Software Engineering Intern | ",
-      company: "Presear Software PVT LMT",
-      duration: "Aug'22 - Jan'24",
-      description: [
-        "I gained hands-on experience with AWS services such as EC2, SES, S3, Load Balancer, and Security Groups. I successfully hosted several websites using EC2 and AWS Amplify. Additionally, I had the opportunity to lead my Cloud team, fostering collaboration and enhancing my technical knowledge while developing my leadership skills in a dynamic environment.",
-      ],
-    },
-    
-    {
-      title: "Full Stack Developer Intern | ",
-      company: "IEEE Bombay Section",
-      duration: "Sep'23 - Nov'23",
-      description: [
-        "During my internship at IEEE Bombay Section, I received a Letter of Recommendation and a certificate for achieving a score of 8 out of 10 based on the successful completion of four weekly tasks. This recognition reflects my dedication and performance in full-stack development during my time at the organization."
-      ],
-    },
-  ];
-
   return (
-    
-    <section id="work-experience" className="work-experience">
-    
+    <section id="experience" className="work-experience pipeline-theme">
       <h2 className="section-title">Work Experience</h2>
-      <div className="timeline">
-      <div className="line"></div>
-        {experiences.map((experience, index) => (
-          <div
-            key={index}
-            className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
-          >
-            <div className="content">
-              <h3 className="title">
-                {experience.title} <span className="company">@ {experience.company}</span>
-              </h3>
-              <p className="duration-location">
-                {experience.duration} | {experience.location}
-              </p>
-              <ul className="description-list">
-                {experience.description.map((item, i) => (
-                  <li className="description-item" key={i}>{item}</li>
-                ))}
-              </ul>
+      <p className="pipeline-desc">
+        <strong>How to read this pipeline:</strong> Each stage below is a real job I did, with the DevOps tool I used for it. The arrows show how work flows from one stage to the next, just like in a real CI/CD pipeline.<br/>
+        <span style={{color:'#2496ED'}}>Hover or tap the tool icon to see what it does!</span>
+      </p>
+      <div className="pipeline-flex">
+        <div className="pipeline-jenkins" title="Jenkins: Orchestrates the entire CI/CD process.">
+          {devopsIcons.jenkins}
+        </div>
+        {experiences.map((exp, idx) => (
+          <React.Fragment key={exp.title}>
+            <div className="pipeline-arrow" />
+            <div className="pipeline-stage technical-stage">
+              <div className="stage-label">Stage {idx + 1}</div>
+              <div className="stage-icon">{exp.icon}</div>
+              <div className="stage-content">
+                <h3 className="stage-title">{exp.title}</h3>
+                <span className="stage-company">@ {exp.company}</span>
+                <span className="stage-duration">{exp.duration}</span>
+                <ul className="stage-desc-list">
+                  {exp.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
+          </React.Fragment>
         ))}
-
-
-
       </div>
-
+      {/* Legend removed as requested */}
     </section>
   );
 };
